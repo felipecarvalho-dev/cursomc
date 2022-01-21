@@ -76,7 +76,7 @@ public class CursomcApplication implements CommandLineRunner{
 		 
 		 
 		 
-		 Produto p1  = new Produto(null, "Computador", 2.000);
+		 Produto p1  = new Produto(null, "Computador", 3000.00);
 		 Produto p2  = new Produto(null, "Impressora", 800.00);
 		 Produto p3  = new Produto(null, "Mouse", 80.00);
 		 Produto p4  = new Produto(null, "Mesa de escritório", 300.00);
@@ -155,7 +155,7 @@ public class CursomcApplication implements CommandLineRunner{
 		pagamentoRepository.saveAll(Arrays.asList(pagto1,pagto2));
 		
 		
-		ItemPedido ip1 = new ItemPedido(ped1, p1, 0.00, 1, 2000.00);
+		ItemPedido ip1 = new ItemPedido(ped1, p1, 0.00, 2, p1.getPreco());
 		ItemPedido ip2 = new ItemPedido(ped1, p3, 0.00, 2, 80.00);
 		ItemPedido ip3 = new ItemPedido(ped2, p2, 100.00, 1, 800.00);
 		
