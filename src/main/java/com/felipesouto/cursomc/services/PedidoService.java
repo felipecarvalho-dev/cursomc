@@ -1,21 +1,21 @@
 package com.felipesouto.cursomc.services;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import com.felipesouto.cursomc.domain.ItemPedido;
 import com.felipesouto.cursomc.domain.PagamentoComBoleto;
 import com.felipesouto.cursomc.domain.Pedido;
-import com.felipesouto.cursomc.domain.Produto;
 import com.felipesouto.cursomc.domain.enums.EstadoPagamento;
 import com.felipesouto.cursomc.repositories.ItemPedidoRepository;
 import com.felipesouto.cursomc.repositories.PagamentoRepository;
 import com.felipesouto.cursomc.repositories.PedidoRepository;
-import com.felipesouto.cursomc.repositories.ProdutoRepository;
 import com.felipesouto.cursomc.services.exception.ObjectNotFoundException;
 
 @Service
@@ -70,4 +70,10 @@ public class PedidoService {
 		 itemPedidoRepository.saveAll(obj.getItens());
 		 return obj;
 	}
+	
+	
+	public List<Pedido> findAll(){
+		return repo.findAll();
+	} 
+	
 }
