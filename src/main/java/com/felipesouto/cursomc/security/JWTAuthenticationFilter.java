@@ -89,6 +89,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 		String token = jwtUtil.generateToken(username);
 		res.addHeader("access-control-expose-headers", "Authorization");
 		res.addHeader("Authorization", "Bearer " + token);
+		res.addHeader("access-control-expose-headers", "Authorization");
 	
 	
 	}
